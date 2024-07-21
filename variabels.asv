@@ -1,0 +1,199 @@
+function varargout = mult(varargin)
+% MULT MATLAB code for mult.fig
+%      MULT, by itself, creates a new MULT or raises the existing
+%      singleton*.
+%
+%      H = MULT returns the handle to a new MULT or the handle to
+%      the existing singleton*.
+%
+%      MULT('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in MULT.M with the given input arguments.
+%
+%      MULT('Property','Value',...) creates a new MULT or raises the
+%      existing singleton*.  Starting from the left, property value pairs are
+%      applied to the GUI before mult_OpeningFcn gets called.  An
+%      unrecognized property name or invalid value makes property application
+%      stop.  All inputs are passed to mult_OpeningFcn via varargin.
+%
+%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
+%      instance to run (singleton)".
+%
+% See also: GUIDE, GUIDATA, GUIHANDLES
+
+% Edit the above text to modify the response to help mult
+
+% Last Modified by GUIDE v2.5 19-Dec-2022 01:04:28
+
+% Begin initialization code - DO NOT EDIT
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @mult_OpeningFcn, ...
+                   'gui_OutputFcn',  @mult_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+% End initialization code - DO NOT EDIT
+
+
+% --- Executes just before mult is made visible.
+function mult_OpeningFcn(hObject, eventdata, handles, varargin)
+% This function has no output args, see OutputFcn.
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% varargin   command line arguments to mult (see VARARGIN)
+
+% Choose default command line output for mult
+handles.output = hObject;
+
+% Update handles structure
+guidata(hObject, handles);
+
+% UIWAIT makes mult wait for user response (see UIRESUME)
+% uiwait(handles.figure1);
+
+
+% --- Outputs from this function are returned to the command line.
+function varargout = mult_OutputFcn(hObject, eventdata, handles) 
+% varargout  cell array for returning output args (see VARARGOUT);
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Get default command line output from handles structure
+varargout{1} = handles.output;
+
+
+
+function edit1_Callback(hObject, eventdata, handles)
+% hObject    handle to edit1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit1 as text
+%        str2double(get(hObject,'String')) returns contents of edit1 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function edit1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function signal1_Callback(hObject, eventdata, handles)
+% hObject    handle to signal1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of signal1 as text
+%        str2double(get(hObject,'String')) returns contents of signal1 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function signal1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to signal1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function mult_Callback(hObject, eventdata, handles)
+% hObject    handle to mult (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of mult as text
+%        str2double(get(hObject,'String')) returns contents of mult as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function mult_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to mult (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function signal2_Callback(hObject, eventdata, handles)
+% hObject    handle to signal2 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of signal2 as text
+%        str2double(get(hObject,'String')) returns contents of signal2 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function signal2_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to signal2 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in result.
+function result_Callback(hObject, eventdata, handles)
+function [y,n] = substruct(x1,n1,x2,n2)
+
+subplot(2,2,1);
+stem(n1,x1);
+title('the first signal ');
+xlabel ('n1');
+ylabel('x1(n1)');
+subplot(2 ,2,2);
+stem(n2,x2);
+title ('the second signal ');
+
+xlabel ('n2');
+ylabel('x2(n2)');
+n=min(min(n1),min(n2)):max(max(n1),max(n2));
+y1=zeros(1,length(n));
+y2=y1;
+y1(find((n>=min(n1))&(n<=max(n1))))=x1;
+y1(find((n>=min(n2))&(n<=max(n2))))=x2;
+y=y1-y2;
+subplot(2,2,[3,4]);
+stem (n,y);
+title ('the multiplication of two signals ');
+xlabel ('n');
+ylabel ('y(n)');
+end
+
+set(handle 
+% hObject    handle to result (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
